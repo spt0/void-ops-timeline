@@ -1,0 +1,422 @@
+[
+  {
+    "id": "claudia-te-quiero-2026-10-11",
+    "when": "2026-10-11T15:17:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-12",
+    "when": "2026-10-12T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-fr2495-2026-10-12",
+    "when": "2026-10-12T12:43:00+02:00",
+    "agent": "Claudia",
+    "action": "Check-in FR2495",
+    "note": "Vuelo Ryanair FR2495. Check-in el lunes 12 oct a las 12:43."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-12",
+    "when": "2026-10-12T14:23:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "gaudi-carruseles-2026-10-12",
+    "when": "2026-10-12T16:11:00+02:00",
+    "agent": "Gaudí",
+    "action": "Confirmación carruseles",
+    "note": "Cada lunes a las 16:11."
+  },
+  {
+    "id": "elon-leads-2026-10-12",
+    "when": "2026-10-12T16:11:00+02:00",
+    "agent": "Elon",
+    "action": "Leads y pitch",
+    "note": "Cada lunes a las 16:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-12-1611",
+    "when": "2026-10-12T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-crecimiento-2026-10-12",
+    "when": "2026-10-12T16:26:00+02:00",
+    "agent": "Elon",
+    "action": "Informe de crecimiento en X",
+    "note": "Cada lunes a las 16:26."
+  },
+  {
+    "id": "elon-carrusel-2026-10-12",
+    "when": "2026-10-12T17:11:00+02:00",
+    "agent": "Elon",
+    "action": "Sube tweet de carrusel",
+    "note": "Lunes, miércoles y viernes, sobre las 17:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-12-1811",
+    "when": "2026-10-12T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-13",
+    "when": "2026-10-13T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "jordan-clipeamos-2026-10-13",
+    "when": "2026-10-13T11:30:00+02:00",
+    "agent": "Jordan",
+    "action": "Seguimiento Clipeamos",
+    "note": "Propuesta de slides de ventas."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-13",
+    "when": "2026-10-13T15:07:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-13-1611",
+    "when": "2026-10-13T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-13-1811",
+    "when": "2026-10-13T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-14",
+    "when": "2026-10-14T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-14",
+    "when": "2026-10-14T13:48:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-14-1611",
+    "when": "2026-10-14T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-carrusel-2026-10-14",
+    "when": "2026-10-14T17:11:00+02:00",
+    "agent": "Elon",
+    "action": "Sube tweet de carrusel",
+    "note": "Lunes, miércoles y viernes, sobre las 17:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-14-1811",
+    "when": "2026-10-14T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "jordan-david-peri-2026-10-14",
+    "when": "2026-10-14T18:40:00+02:00",
+    "agent": "Jordan",
+    "action": "Cierre David Peri",
+    "note": "Proyecto completo, pendiente de respuesta."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-15",
+    "when": "2026-10-15T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "jordan-nichos-2026-10-15",
+    "when": "2026-10-15T12:15:00+02:00",
+    "agent": "Jordan",
+    "action": "Follow-up Nichos Faceless",
+    "note": "Presentación enviada."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-15",
+    "when": "2026-10-15T16:04:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-15-1611",
+    "when": "2026-10-15T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-15-1811",
+    "when": "2026-10-15T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-16",
+    "when": "2026-10-16T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-16",
+    "when": "2026-10-16T14:51:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-16-1611",
+    "when": "2026-10-16T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-carrusel-2026-10-16",
+    "when": "2026-10-16T17:11:00+02:00",
+    "agent": "Elon",
+    "action": "Sube tweet de carrusel",
+    "note": "Lunes, miércoles y viernes, sobre las 17:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-16-1811",
+    "when": "2026-10-16T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-17",
+    "when": "2026-10-17T16:18:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-18",
+    "when": "2026-10-18T17:02:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-19",
+    "when": "2026-10-19T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "jordan-academia-2026-10-19",
+    "when": "2026-10-19T11:05:00+02:00",
+    "agent": "Jordan",
+    "action": "Seguimiento Academia de Lanzamientos",
+    "note": "Presentación de ventas."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-19",
+    "when": "2026-10-19T14:36:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "gaudi-carruseles-2026-10-19",
+    "when": "2026-10-19T16:11:00+02:00",
+    "agent": "Gaudí",
+    "action": "Confirmación carruseles",
+    "note": "Cada lunes a las 16:11."
+  },
+  {
+    "id": "elon-leads-2026-10-19",
+    "when": "2026-10-19T16:11:00+02:00",
+    "agent": "Elon",
+    "action": "Leads y pitch",
+    "note": "Cada lunes a las 16:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-19-1611",
+    "when": "2026-10-19T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-crecimiento-2026-10-19",
+    "when": "2026-10-19T16:26:00+02:00",
+    "agent": "Elon",
+    "action": "Informe de crecimiento en X",
+    "note": "Cada lunes a las 16:26."
+  },
+  {
+    "id": "elon-carrusel-2026-10-19",
+    "when": "2026-10-19T17:11:00+02:00",
+    "agent": "Elon",
+    "action": "Sube tweet de carrusel",
+    "note": "Lunes, miércoles y viernes, sobre las 17:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-19-1811",
+    "when": "2026-10-19T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-20",
+    "when": "2026-10-20T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-20",
+    "when": "2026-10-20T15:44:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-20-1611",
+    "when": "2026-10-20T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-20-1811",
+    "when": "2026-10-20T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-21",
+    "when": "2026-10-21T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-21",
+    "when": "2026-10-21T13:19:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-21-1611",
+    "when": "2026-10-21T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-carrusel-2026-10-21",
+    "when": "2026-10-21T17:11:00+02:00",
+    "agent": "Elon",
+    "action": "Sube tweet de carrusel",
+    "note": "Lunes, miércoles y viernes, sobre las 17:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-21-1811",
+    "when": "2026-10-21T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-22",
+    "when": "2026-10-22T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-22-1611",
+    "when": "2026-10-22T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-22",
+    "when": "2026-10-22T16:47:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-22-1811",
+    "when": "2026-10-22T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-tc-reply-2026-10-23",
+    "when": "2026-10-23T10:11:00+02:00",
+    "agent": "Elon",
+    "action": "Reenvía tweet a TC Reply",
+    "note": "De lunes a viernes. Reenvío a TC Reply."
+  },
+  {
+    "id": "claudia-te-quiero-2026-10-23",
+    "when": "2026-10-23T15:28:00+02:00",
+    "agent": "Claudia",
+    "action": "Te quiero, señora",
+    "note": "Cada tarde, a una hora distinta."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-23-1611",
+    "when": "2026-10-23T16:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Primera pasada, de lunes a viernes."
+  },
+  {
+    "id": "elon-carrusel-2026-10-23",
+    "when": "2026-10-23T17:11:00+02:00",
+    "agent": "Elon",
+    "action": "Sube tweet de carrusel",
+    "note": "Lunes, miércoles y viernes, sobre las 17:11."
+  },
+  {
+    "id": "claudia-ryanair-2026-10-23-1811",
+    "when": "2026-10-23T18:11:00+02:00",
+    "agent": "Claudia",
+    "action": "Revisa reclamación Ryanair",
+    "note": "Segunda pasada, de lunes a viernes."
+  }
+]
