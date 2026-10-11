@@ -13,9 +13,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { schedule } from "../data/schedule";
 import { emptyCopy, FILTERS, selectItems, type FilterId } from "../lib/schedule";
 import { formatRelativeLabel } from "../lib/time";
-import { colors, fonts } from "../theme";
+import { colors, text } from "../theme";
 import type { ScheduleItem } from "../types";
 import { Detail } from "./Detail";
+import { Glass } from "./Glass";
 
 export function Timeline() {
   const insets = useSafeAreaInsets();
@@ -61,7 +62,11 @@ export function Timeline() {
 
   return (
     <View style={styles.screen}>
-      <View style={[styles.column, { paddingTop: insets.top }]}>
+      <View pointerEvents="none" style={styles.wash}>
+        <View style={styles.washBlue} />
+        <View style={styles.washGray} />
+      </View>
+      <View style={styles.column}>
         <FlatList
           ref={listRef}
           data={items}
@@ -78,7 +83,7 @@ export function Timeline() {
           }
           contentContainerStyle={[
             styles.listContent,
-            { paddingBottom: insets.bottom + 48 },
+            { paddingTop: insets.top + 12, paddingBottom: insets.bottom + 40 },
           ]}
           ListHeaderComponent={
             <View style={styles.header}>
@@ -87,37 +92,43 @@ export function Timeline() {
                 Agenda
               </Text>
               <Text style={styles.dek}>Lo que viene.</Text>
-              <View style={styles.filters}>
-                {FILTERS.map((entry) => {
-                  const active = entry.id === filter;
-                  return (
-                    <Pressable
-                      key={entry.id}
-                      accessibilityRole="button"
-                      accessibilityState={{ selected: active }}
-                      onPress={() => onFilter(entry.id)}
-                      style={styles.chip}
-                    >
-                      <Text style={[styles.chipLabel, active && styles.chipLabelActive]}>
-                        {entry.label}
-                      </Text>
-                      <View style={[styles.chipRule, active && styles.chipRuleActive]} />
-                    </Pressable>
-                  );
-                })}
-              </View>
+              <Glass style={styles.filterBar} intensity={80} tint="systemChromeMaterialLight">
+                <View style={styles.filterRow}>
+                  {FILTERS.map((entry) => {
+                    const active = entry.id === filter;
+                    return (
+                      <Pressable
+                        key={entry.id}
+                        accessibilityRole="button"
+                        accessibilityState={{ selected: active }}
+                        onPress={() => onFilter(entry.id)}
+                        style={[styles.chip, active && styles.chipActive]}
+                      >
+                        <Text style={[styles.chipLabel, active && styles.chipLabelActive]}>
+                          {entry.label}
+                        </Text>
+                      </Pressable>
+                    );
+                  })}
+                </View>
+              </Glass>
             </View>
           }
           ListEmptyComponent={
-            <View style={styles.empty}>
-              <Text style={styles.emptyTitle}>Nada por ahora.</Text>
-              <Text style={styles.emptyBody}>{emptyCopy(filter)}</Text>
-            </View>
+            <Glass style={styles.emptyCard} intensity={64}>
+              <View style={styles.emptyBody}>
+                <Text style={styles.emptyTitle}>Nada por ahora.</Text>
+                <Text style={styles.emptyCopy}>{emptyCopy(filter)}</Text>
+              </View>
+            </Glass>
           }
           renderItem={({ item }) => (
             <Row item={item} now={now} onPress={() => setSelected(item)} />
           )}
         />
+      </View>
+      <View pointerEvents="none" style={[styles.statusFrost, { height: insets.top }]}>
+        <Glass intensity={90} tint="systemUltraThinMaterialLight" style={styles.statusGlass} />
       </View>
       {selected ? (
         <Detail item={selected} now={now} onClose={() => setSelected(null)} />
@@ -140,16 +151,20 @@ function Row({
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={`${label}. ${item.agent}. ${item.action}`}
-      android_ripple={{ color: "rgba(255,255,255,0.06)" }}
+      android_ripple={{ color: "rgba(0,0,0,0.05)" }}
       onPress={onPress}
       style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
     >
-      <Text style={styles.meta}>
-        <Text style={styles.time}>{label}</Text>
-        <Text style={styles.dot}>  ·  </Text>
-        <Text style={styles.agent}>{item.agent}</Text>
-      </Text>
-      <Text style={styles.action}>{item.action}</Text>
+      <Glass style={styles.card} intensity={60}>
+        <View style={styles.cardBody}>
+          <Text style={styles.meta}>
+            <Text style={styles.time}>{label}</Text>
+            <Text style={styles.dot}>  ·  </Text>
+            <Text style={styles.agent}>{item.agent}</Text>
+          </Text>
+          <Text style={styles.action}>{item.action}</Text>
+        </View>
+      </Glass>
     </Pressable>
   );
 }
@@ -165,111 +180,166 @@ const styles = StyleSheet.create({
     maxWidth: 680,
     alignSelf: "center",
   },
+  wash: {
+    ...StyleSheet.absoluteFill,
+  },
+  washBlue: {
+    position: "absolute",
+    width: 360,
+    height: 360,
+    borderRadius: 180,
+    backgroundColor: "rgba(0, 122, 255, 0.07)",
+    top: -80,
+    right: -120,
+  },
+  washGray: {
+    position: "absolute",
+    width: 300,
+    height: 300,
+    borderRadius: 150,
+    backgroundColor: "rgba(142, 142, 147, 0.12)",
+    top: 460,
+    left: -140,
+  },
+  statusFrost: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+  },
+  statusGlass: {
+    flex: 1,
+    borderWidth: 0,
+    backgroundColor: "transparent",
+  },
   listContent: {
     flexGrow: 1,
   },
   header: {
-    paddingHorizontal: 24,
-    paddingTop: 22,
-    paddingBottom: 18,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.line,
+    paddingHorizontal: 20,
+    paddingBottom: 8,
   },
   kicker: {
-    fontFamily: fonts.sansMedium,
-    fontSize: 14,
-    color: colors.muted,
+    ...text("600"),
+    fontSize: 13,
+    letterSpacing: 0.2,
+    color: colors.faint,
   },
   title: {
-    fontFamily: fonts.serif,
-    fontSize: 64,
-    lineHeight: 70,
+    ...text("700"),
+    fontSize: 40,
+    lineHeight: 46,
+    letterSpacing: 0.2,
     color: colors.text,
-    marginTop: 10,
+    marginTop: 6,
   },
   dek: {
-    fontFamily: fonts.sans,
+    ...text("400"),
     fontSize: 17,
-    lineHeight: 24,
+    lineHeight: 22,
     color: colors.muted,
-    marginTop: 8,
+    marginTop: 6,
   },
-  filters: {
+  filterBar: {
+    marginTop: 28,
+    borderRadius: 16,
+    padding: 4,
+    borderColor: colors.glassStroke,
+  },
+  filterRow: {
     flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 22,
-    marginTop: 36,
+    gap: 4,
   },
   chip: {
-    minHeight: 44,
+    flex: 1,
+    minHeight: 36,
+    borderRadius: 12,
+    alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 6,
     cursor: "pointer",
   },
+  chipActive: {
+    backgroundColor: colors.chip,
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 2,
+  },
   chipLabel: {
-    fontFamily: fonts.sans,
-    fontSize: 15,
+    ...text("500"),
+    fontSize: 13,
     color: colors.muted,
   },
   chipLabelActive: {
-    fontFamily: fonts.sansMedium,
+    ...text("600"),
     color: colors.text,
   },
-  chipRule: {
-    height: 1,
-    marginTop: 6,
-    backgroundColor: "transparent",
-  },
-  chipRuleActive: {
-    backgroundColor: colors.text,
-  },
   row: {
-    paddingHorizontal: 24,
-    paddingVertical: 26,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.line,
+    marginHorizontal: 20,
+    marginTop: 12,
     cursor: "pointer",
   },
   rowPressed: {
-    backgroundColor: colors.pressed,
+    opacity: 0.72,
+  },
+  card: {
+    borderRadius: 22,
+    borderColor: colors.glassStroke,
+    shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 1,
+  },
+  cardBody: {
+    paddingHorizontal: 18,
+    paddingVertical: 16,
   },
   meta: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 13,
+    lineHeight: 18,
   },
   time: {
-    fontFamily: fonts.sans,
+    ...text("400"),
     color: colors.muted,
   },
   dot: {
-    fontFamily: fonts.sans,
+    ...text("400"),
     color: colors.faint,
   },
   agent: {
-    fontFamily: fonts.sansMedium,
+    ...text("600"),
     color: colors.text,
   },
   action: {
-    fontFamily: fonts.sans,
+    ...text("600"),
+    fontSize: 17,
+    lineHeight: 22,
+    color: colors.text,
+    marginTop: 4,
+  },
+  emptyCard: {
+    marginHorizontal: 20,
+    marginTop: 20,
+    borderRadius: 22,
+  },
+  emptyBody: {
+    paddingHorizontal: 18,
+    paddingVertical: 28,
+  },
+  emptyTitle: {
+    ...text("600"),
     fontSize: 22,
     lineHeight: 28,
     color: colors.text,
-    marginTop: 6,
   },
-  empty: {
-    paddingHorizontal: 24,
-    paddingTop: 48,
-  },
-  emptyTitle: {
-    fontFamily: fonts.serifItalic,
-    fontSize: 36,
-    lineHeight: 42,
-    color: colors.text,
-  },
-  emptyBody: {
-    fontFamily: fonts.sans,
+  emptyCopy: {
+    ...text("400"),
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 22,
     color: colors.muted,
-    marginTop: 12,
+    marginTop: 6,
   },
 });

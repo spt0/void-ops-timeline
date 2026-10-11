@@ -5,8 +5,8 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
-    "backgroundColor": "#000000",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFFFF",
     "scheme": "void-agenda",
     "ios": {
       "supportsTablet": true,
@@ -24,10 +24,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#FFFFFF"
     },
     "plugins": [
-      "expo-font",
       "expo-status-bar"
     ]
   }
