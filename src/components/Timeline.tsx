@@ -42,9 +42,10 @@ export function Timeline() {
   }, [refreshTimes]);
 
   useEffect(() => {
-    if (Platform.OS !== "web" || typeof document === "undefined" || !document.body) return;
-    document.body.style.backgroundColor = colors.background;
-    document.title = "Void — Agenda";
+    if (Platform.OS !== "web" || typeof document === "undefined") return;
+    document.documentElement.style.backgroundColor = colors.background;
+    if (document.body) document.body.style.backgroundColor = colors.background;
+    document.title = "Agenda";
   }, []);
 
   const items = useMemo(() => selectItems(schedule, now, filter), [now, filter]);
@@ -62,13 +63,10 @@ export function Timeline() {
 
   return (
     <View style={styles.screen}>
-      <View pointerEvents="none" style={styles.wash}>
-        <View style={styles.washBlue} />
-        <View style={styles.washGray} />
-      </View>
       <View style={styles.column}>
         <FlatList
           ref={listRef}
+          style={styles.list}
           data={items}
           keyExtractor={(item, index) => `${item.id}-${index}`}
           extraData={now}
@@ -87,11 +85,6 @@ export function Timeline() {
           ]}
           ListHeaderComponent={
             <View style={styles.header}>
-              <Text style={styles.kicker}>Void</Text>
-              <Text accessibilityRole="header" style={styles.title}>
-                Agenda
-              </Text>
-              <Text style={styles.dek}>Lo que viene.</Text>
               <Glass style={styles.filterBar} intensity={80} tint="systemChromeMaterialLight">
                 <View style={styles.filterRow}>
                   {FILTERS.map((entry) => {
@@ -126,9 +119,6 @@ export function Timeline() {
             <Row item={item} now={now} onPress={() => setSelected(item)} />
           )}
         />
-      </View>
-      <View pointerEvents="none" style={[styles.statusFrost, { height: insets.top }]}>
-        <Glass intensity={90} tint="systemUltraThinMaterialLight" style={styles.statusGlass} />
       </View>
       {selected ? (
         <Detail item={selected} now={now} onClose={() => setSelected(null)} />
@@ -179,69 +169,22 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 680,
     alignSelf: "center",
+    backgroundColor: colors.background,
   },
-  wash: {
-    ...StyleSheet.absoluteFill,
-  },
-  washBlue: {
-    position: "absolute",
-    width: 360,
-    height: 360,
-    borderRadius: 180,
-    backgroundColor: "rgba(0, 122, 255, 0.07)",
-    top: -80,
-    right: -120,
-  },
-  washGray: {
-    position: "absolute",
-    width: 300,
-    height: 300,
-    borderRadius: 150,
-    backgroundColor: "rgba(142, 142, 147, 0.12)",
-    top: 460,
-    left: -140,
-  },
-  statusFrost: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-  },
-  statusGlass: {
+  list: {
     flex: 1,
-    borderWidth: 0,
-    backgroundColor: "transparent",
+    backgroundColor: colors.background,
   },
   listContent: {
     flexGrow: 1,
+    backgroundColor: colors.background,
   },
   header: {
     paddingHorizontal: 20,
-    paddingBottom: 8,
-  },
-  kicker: {
-    ...text("600"),
-    fontSize: 13,
-    letterSpacing: 0.2,
-    color: colors.faint,
-  },
-  title: {
-    ...text("700"),
-    fontSize: 40,
-    lineHeight: 46,
-    letterSpacing: 0.2,
-    color: colors.text,
-    marginTop: 6,
-  },
-  dek: {
-    ...text("400"),
-    fontSize: 17,
-    lineHeight: 22,
-    color: colors.muted,
-    marginTop: 6,
+    paddingBottom: 4,
+    backgroundColor: colors.background,
   },
   filterBar: {
-    marginTop: 28,
     borderRadius: 16,
     padding: 4,
     borderColor: colors.glassStroke,

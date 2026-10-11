@@ -14,7 +14,7 @@ export function Glass({
   children,
   style,
   intensity = 72,
-  tint = "systemThinMaterialLight",
+  tint = "systemChromeMaterialLight",
 }: GlassProps) {
   return (
     <View style={[styles.clip, style]}>
